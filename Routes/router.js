@@ -18,7 +18,7 @@ const multerconfig=require('../Middlewares/multermiddleware')
 
 const router=new express.Router()
 
-// setup path
+
 // router syntax:router.http request('path',()=>{logic in controller})
 router.post('/user/register',usercontroller.register)
 
@@ -46,6 +46,7 @@ router.put('/user/uprofile',jwtmiddleware,multerconfig.single('profile'),usercon
 
 // get user length
 router.get('/user/length',usercontroller.reguser)
+
 
 
 
